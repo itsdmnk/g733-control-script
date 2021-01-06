@@ -4,6 +4,10 @@ class G733Battery:
 
     @staticmethod
     def parse_response(response):
+        if len(response) < 6:
+            print("Error! Cannot parse battery voltage from device.")
+            return -1
+
         voltage = G733Battery.__get_voltage(response)
         percentage = G733Battery.__calculate_percentage_from_voltage(voltage)
         return percentage
