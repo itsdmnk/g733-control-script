@@ -19,7 +19,3 @@ class G733Battery:
         percentage = (voltage - G733Battery.CHARGE_MIN) / (
                 G733Battery.CHARGE_MAX - G733Battery.CHARGE_MIN)
         return round(percentage * 100, 2)
-
-
-# battery = G733BatteryCharge()
-#print(G733BatteryCharge.parse_response([17, 255, 8, 11, 14, 148, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
